@@ -1,0 +1,123 @@
+.label_animate {
+    position: absolute;
+    pointer-events: none;
+    font-size: 16px;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    padding-left: 24px;
+    transform: translateY(-50%);
+    transition: all ease-in 0.25s;
+}
+
+.input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: none;
+    background: rgba(245, 248, 250, 0.1);
+    color: #fff;
+    padding: 31px 24px 8px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: border 0.3s;
+    cursor: pointer; 
+
+    &:focus {
+        border: 1px solid #20A86B;
+        outline: none;
+    }
+
+    &:hover {
+        border: 1px solid #20A86B;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+        border-color: #E15433;
+        background: rgba(245, 248, 250, 0.1);
+    }
+
+    &::-webkit-input-placeholder {
+        opacity: 0;
+    }
+
+    &::-moz-placeholder {
+        opacity: 0;
+    }
+
+    &:-ms-input-placeholder {
+        opacity: 0;
+    }
+
+    &:-moz-placeholder {
+        opacity: 0;
+    }
+
+    &:focus+.label_animate,
+    &:not(:placeholder-shown)+.label_animate {
+        top: 30%;
+        font-size: 12px;
+    }
+
+    &:invalid:not(:placeholder-shown)+.form__error {
+        display: block;
+    }
+
+}
+
+.form__error {
+    font-family: 'san_francisco';
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 24px;
+     display: none;
+    background: #E15433;
+    border-radius: 4px;
+    text-align: center;
+    transition: .5s;
+    padding: 8px 16px;
+    width: 248px;
+    border: none;
+    outline: 0;
+    position: absolute;
+    top: -50px;
+    left: 20%;
+    z-index: 3;
+}
+
+.triangle {
+    border-top: 10px solid #E15433 ;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    bottom: 90%;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+       }
+
+
+.form__error-email {
+    width: 100%;
+    left: 0;
+    top: -35%;
+    display: none;
+    display: flex; //замена
+
+    &_icon::before {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 4px;
+}
+
+}
+    .button_icon-error::before {
+        width: 24px;
+        height: 24px;
+        background: url(/images/icon/attention.png);
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+    }

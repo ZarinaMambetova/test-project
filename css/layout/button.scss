@@ -1,0 +1,55 @@
+.button {
+    display: flex;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-family: 'open_sans';
+
+    cursor: pointer;
+
+    &_white {
+        border: 1px solid #D8E1E6;
+        background: transparent;
+    }
+
+    &_icon::before {
+        content: "";
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-right: 4px;
+    }
+
+    &_icon-login::before {
+        width: 24px;
+        height: 24px;
+        background: url(/images/icon/user.svg);
+    }
+}
+
+.button__link {
+    color: #ffffff;
+    line-height: 24px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor:  pointer; 
+}
+
+.btn-submit {
+    display: inline-block;
+    font-family: 'open_sans';
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    background: #1C945D;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: .5s;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}

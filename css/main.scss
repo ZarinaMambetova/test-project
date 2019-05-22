@@ -1,0 +1,16 @@
+/*Setup*/
+@import "config/mixins";
+@import "config/variables";
+@import "config/fonts";
+@import "config/base";
+
+/*Block*/
+@import "layout/header";
+@import "layout/about";
+@import "layout/radio-buttons";
+@import "layout/checkbox";
+@import "layout/content";
+@import "layout/button";
+@import "layout/inputs";
+@import "layout/form";
+@import "layout/photo";

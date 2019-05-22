@@ -1,0 +1,23 @@
+.form__row {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    color: #7A8F99;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &_extra-margin {
+        margin-bottom: 40px;
+    }
+}
+
+.form__row-title {
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 16px;
+    width: 30%;
+}
+
+

@@ -1,0 +1,52 @@
+
+.form__radio {
+    display: flex;
+}
+
+.form__radio-input {
+    display: none;
+}
+
+
+
+.form__toolbar {
+    display: flex;
+    width: 75%;
+}
+
+.toolbar {
+    background: rgba(245, 248, 250, 0.1);
+    border-radius: 4px;
+}
+
+.toolbar__col {
+    flex: 1;
+
+    &:first-child {
+        & .toolbar__label {
+            border-radius: 4px 0 0 4px;
+        }
+    }
+
+    &:last-child {
+        & .toolbar__label {
+            border-radius: 0 4px 4px 0;
+        }
+    }
+}
+
+.toolbar__label {
+    display: inline-block;
+    border: 1px solid transparent;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__radio-input:checked+.toolbar__label,
+.toolbar__label:hover {
+    background-color: #0b172a;
+    border: 1px solid #20A86B;
+    cursor: pointer;
+}

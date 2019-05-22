@@ -1,0 +1,40 @@
+.content__title {
+    font-family: 'open_sans';
+    font-size: 36px;
+    line-height: 48px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.content__form{
+    width: 35%; //По макету 440 но не указываю т.к. верстаю в %
+    margin-right: 5%;
+    flex-shrink: 0;
+    @include laptop{
+        width: 45%;
+        height: 520px;
+    }
+    @include tablets{
+        width: 100%;
+    }
+}
+.content__bg{
+    position: absolute;
+    right: 0;
+    top: 90px;
+    height: 613px;
+    width: 56%;
+    background-image: url(/images/content/frontal-black.png), url(/images/content/dark.png);
+    background-repeat: no-repeat;
+    background-size: 30%, contain;
+    background-position: left bottom, right bottom;
+    @include desktop-wide{
+        background-size: 245px, contain;
+    }
+    @include laptop{
+        width: 50%;
+        height: 520px;
+    }
+    @include tablets{
+        display: none;
+    }
+}
