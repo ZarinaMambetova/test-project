@@ -1,2 +1,2 @@
 # test-project
-https://github.com/ZarinaMambetova/test-project/index.html
+https://zarinamambetova.github.io/test-project//index.html
