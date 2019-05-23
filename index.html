@@ -9,94 +9,93 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
-
-<body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="container header__container">
-                <div class="white-block"></div>
-                <button type="button" class="button button_white button_icon button_icon-login">
-                    <a href="#" class="button__link">Войти</a>
-                </button>
-            </div>
-        </header>
-        <div class="content">
-            <div class="container content__container">
-                <div class="content__form">
-                    <h1 class="content__title">Начните торговать прямо сейчас</h1>
-                    <ul class="about__list">
-                        <li class="about__item">
-                            Нет спреда — торгуйте с прозрачными и точными котировкам
-                        </li>
-                        <li class="about__item">
-                            Достаточно депозита в $10, чтобы начать торговать
-                        </li>
-                    </ul>
-                    <form class="form">
-                        <div class="form__container">
-                            <div class="form__row">
-                                <input class="input" id="email" name="email" type="email" placeholder="Ваш e-mail"
-                                    required>
-                                <div class="form__error">Неверный e-mail
-                                    <div class="triangle"></div>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container header__container">
+                    <div class="white-block"></div>
+                    <button type="button" class="button button_white button_icon button_icon-login">
+                        <a href="#" class="button__link">Войти</a>
+                    </button>
+                </div>
+            </header>
+            <div class="content">
+                <div class="container content__container">
+                    <div class="content__form">
+                        <h1 class="content__title">Начните торговать прямо сейчас</h1>
+                        <ul class="about__list">
+                            <li class="about__item">
+                                Нет спреда — торгуйте с прозрачными и точными котировкам
+                            </li>
+                            <li class="about__item">
+                                Достаточно депозита в $10, чтобы начать торговать
+                            </li>
+                        </ul>
+                        <form class="form">
+                            <div class="form__container">
+                                <div class="form__row">
+                                    <div class="form__error">Неверный e-mail
+                                        <div class="triangle"></div>
+                                    </div> <!-- Поменяла местами, но теперь сообщение об ошибке не появляется -->
+                                    <input class="input" id="email" name="email" type="email" placeholder="Ваш e-mail"
+                                        required>
+                                    <label for="email" class="label label_animate">
+                                        Ваш e-mail
+                                    </label>
                                 </div>
-                                <label for="email" class="label label_animate">
-                                    Ваш e-mail
-                                </label>
-                            </div>
-                            <div class="form__row">
-                                <input class="input" id="password" name="pass" type="password"
-                                    placeholder="Придумайте пароль" required minlength="4">
-                                <div class="form__error">Неверный пароль
-                                    <div class="triangle"></div>
+                                <div class="form__row">
+                                    <input class="input" id="password" name="pass" type="password"
+                                        placeholder="Придумайте пароль" required minlength="4">
+                                    <div class="form__error">Неверный пароль
+                                        <div class="triangle"></div>
+                                    </div>
+                                    <label for="password" class="label label_animate">
+                                        Придумайте пароль
+                                    </label>
                                 </div>
-                                <label for="password" class="label label_animate">
-                                    Придумайте пароль
-                                </label>
-                            </div>
-                            <div class="form__row">
-                                <div class="form__radio">
-                                    <div class="form__row-title">Валюта для ввода и вывода средств</div>
-                                    <div class="form__toolbar toolbar">
-                                        <div class="toolbar__col">
-                                            <input class="form__radio-input" type="radio" id="radio-P" name="radios"
-                                                value="Рубли" checked>
-                                            <label class="toolbar__label" for="radio-P">P</label>
-                                        </div>
-                                        <div class="toolbar__col">
-                                            <input class="form__radio-input" type="radio" id="radio-S" name="radios"
-                                                value="Доллары">
-                                            <label class="toolbar__label" for="radio-S">S</label>
+                                <div class="form__row">
+                                    <div class="form__radio">
+                                        <div class="form__row-title">Валюта для ввода и вывода средств</div>
+                                        <div class="form__toolbar toolbar">
+                                            <div class="toolbar__col">
+                                                <input class="form__radio-input" type="radio" id="radio-P" name="radios"
+                                                    value="Рубли" checked>
+                                                <label class="toolbar__label" for="radio-P">P</label>
+                                            </div>
+                                            <div class="toolbar__col">
+                                                <input class="form__radio-input" type="radio" id="radio-S" name="radios"
+                                                    value="Доллары">
+                                                <label class="toolbar__label" for="radio-S">S</label>
 
-                                        </div>
-                                        <div class="toolbar__col">
-                                            <input class="form__radio-input" type="radio" id="radio-E" name="radios"
-                                                value="Евро">
-                                            <label class="toolbar__label" for="radio-E">E</label>
+                                            </div>
+                                            <div class="toolbar__col">
+                                                <input class="form__radio-input" type="radio" id="radio-E" name="radios"
+                                                    value="Евро">
+                                                <label class="toolbar__label" for="radio-E">E</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form__row form__row_extra-margin">
-                                <div class="form__row-checkbox"></div>
-                                <input class="form__checkbox" id="adult" type="checkbox" value="adult" name="adult">
-                                <label class="label label_checkbox" for="adult">
-                                    Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.
-                                </label>
-                            </div>
-                            <div class="form__row ">
-                                <input type="submit" class="button btn-submit" value="Зарегистрироваться">
-                                <div class="form__error form__error-email button_icon button_icon-error">Учётная запись с указанным e-mail уже существует
+                                <div class="form__row form__row_extra-margin">
+                                    <div class="form__row-checkbox"></div>
+                                    <input class="form__checkbox" id="adult" type="checkbox" value="adult" name="adult">
+                                    <label class="label label_checkbox" for="adult">
+                                        Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг.
+                                    </label>
+                                </div>
+                                <div class="form__row ">
+                                    <input type="submit" class="button btn-submit" value="Зарегистрироваться">
+                                    <div class="form__error form__error-email button_icon button_icon-error">Учётная запись с указанным e-mail уже существует
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="content__bg">
+                        </form>
+                    </div>
+                    <div class="content__bg">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-
+        <script src="js/main.js"></script>
+    </body>
 </html>
