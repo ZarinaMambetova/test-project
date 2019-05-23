@@ -31,21 +31,21 @@
                                 Достаточно депозита в $10, чтобы начать торговать
                             </li>
                         </ul>
-                        <form class="form">
+                        <form class="form" id="myForm">
                             <div class="form__container">
                                 <div class="form__row">
                                     <div class="form__error">Неверный e-mail
                                         <div class="triangle"></div>
                                     </div> <!-- Поменяла местами, но теперь сообщение об ошибке не появляется -->
                                     <input class="input" id="email" name="email" type="email" placeholder="Ваш e-mail"
-                                        required>
+                                        required autocomplete="username">
                                     <label for="email" class="label label_animate">
                                         Ваш e-mail
                                     </label>
                                 </div>
                                 <div class="form__row">
                                     <input class="input" id="password" name="pass" type="password"
-                                        placeholder="Придумайте пароль" required minlength="4">
+                                        placeholder="Придумайте пароль" required minlength="4" autocomplete="current-password">
                                     <div class="form__error">Неверный пароль
                                         <div class="triangle"></div>
                                     </div>
@@ -84,7 +84,7 @@
                                     </label>
                                 </div>
                                 <div class="form__row ">
-                                    <input type="submit" class="button btn-submit" value="Зарегистрироваться">
+                                    <input type="submit" id="submit" class="button btn-submit" value="Зарегистрироваться">
                                     <div class="form__error form__error-email button_icon button_icon-error">Учётная запись с указанным e-mail уже существует
                                     </div>
                                 </div>
@@ -96,6 +96,6 @@
                 </div>
             </div>
         </div>
-        <script src="js/main.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
