@@ -7,8 +7,13 @@
     cursor: pointer;
 
     &_white {
-        border: 1px solid #D8E1E6;
+        border: 1px solid rgb(216, 225, 230);
         background: transparent;
+
+        &:hover {
+            border: 1px solid rgb(28, 148, 93);
+            transition: .3s;
+        }
     }
 
     &_icon::before {
@@ -33,7 +38,7 @@
     font-size: 16px;
     text-align: center;
     text-decoration: none;
-    cursor:  pointer; 
+    cursor:  pointer;
 }
 
 .btn-submit {
@@ -42,7 +47,7 @@
     font-weight: 600;
     font-size: 16px;
     color: #ffffff;
-    background: #1C945D;
+    background: rgb(28, 148, 93);
     border-radius: 4px;
     text-align: center;
     text-decoration: none;
@@ -52,4 +57,8 @@
     border: none;
     outline: 0;
     cursor: pointer;
+
+    &:hover {
+        background: rgba(28, 148, 93, .7);
+    }
 }

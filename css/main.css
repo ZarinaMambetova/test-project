@@ -262,8 +262,13 @@ p {
   font-family: 'open_sans';
   cursor: pointer; }
   .button_white {
-    border: 1px solid #D8E1E6;
+    border: 1px solid #d8e1e6;
     background: transparent; }
+    .button_white:hover {
+      border: 1px solid #1c945d;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
   .button_icon::before {
     content: "";
     display: block;
@@ -290,7 +295,7 @@ p {
   font-weight: 600;
   font-size: 16px;
   color: #ffffff;
-  background: #1C945D;
+  background: #1c945d;
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
@@ -302,6 +307,8 @@ p {
   border: none;
   outline: 0;
   cursor: pointer; }
+  .btn-submit:hover {
+    background: rgba(28, 148, 93, 0.7); }
 
 .label_animate {
   position: absolute;
@@ -334,12 +341,12 @@ p {
   transition: border 0.3s;
   cursor: pointer; }
   .input:focus {
-    border: 1px solid #20A86B;
+    border: 1px solid #20a86b;
     outline: none; }
   .input:hover {
-    border: 1px solid #20A86B; }
+    border: 1px solid #20a86b; }
   .input:invalid:not(:placeholder-shown) {
-    border-color: #E15433;
+    border-color: #e15433;
     background: rgba(245, 248, 250, 0.1); }
   .input::-webkit-input-placeholder {
     opacity: 0; }
@@ -349,20 +356,20 @@ p {
     opacity: 0; }
   .input:-moz-placeholder {
     opacity: 0; }
-  .input:focus + .label_animate,
-  .input:not(:placeholder-shown) + .label_animate {
+  .input:focus ~ .label_animate,
+  .input:not(:placeholder-shown) ~ .label_animate {
     top: 30%;
     font-size: 12px; }
-  .input:invalid:not(:placeholder-shown) + .form__error {
+  .input:invalid:not(:placeholder-shown) ~ .form__error {
     display: block; }
 
 .form__error {
   font-family: 'san_francisco';
   font-size: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 24px;
   display: none;
-  background: #E15433;
+  background: #e15433;
   border-radius: 4px;
   text-align: center;
   -webkit-transition: .5s;
@@ -378,7 +385,7 @@ p {
   z-index: 3; }
 
 .triangle {
-  border-top: 10px solid #E15433;
+  border-top: 10px solid #e15433;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid transparent;
@@ -390,11 +397,8 @@ p {
 .form__error-email {
   width: 100%;
   left: 0;
-  top: -35%;
-  display: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  top: -20%;
+  text-align: left; }
   .form__error-email_icon::before {
     content: "";
     display: block;
@@ -402,6 +406,12 @@ p {
     background-size: contain;
     background-position: center;
     margin-right: 4px; }
+  .form__error-email:active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .form__error-email:active + .btn-submit {
+    margin-top: 50px; }
 
 .button_icon-error::before {
   width: 24px;
@@ -409,7 +419,8 @@ p {
   background: url(/images/icon/attention.png);
   background-repeat: no-repeat;
   -ms-flex-negative: 0;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  margin-top: 4px; }
 
 .form__row {
   width: 100%;

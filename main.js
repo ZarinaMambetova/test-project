@@ -1,49 +1,49 @@
 const myForm = document.querySelector('#myForm');
 const send = document.querySelector('#submit');
 
-send.addEventListener('click', event => {
-    event.preventDefoult();
+send.addEventListener('click', (event) => {
+  event.preventDefault();
 
-    if (validateForm(myForm)) {
-        const data = {
-            email: myForm.elements.email.value,
-            password: myForm.elements.password.value,
-            radios: myForm.elements.radios.value,
-            adult: myForm.elements.adult.value,
-        };
-        // console.log(data);
-        const xhr = new XMLHttpRequest();
-        xhr.responseType = 'json';
-        xhr.open('POST', 'http://httpbin.org/post');
-        xhr.send(JSON.stringify(data));
-        xhr.addEventListener('load', () => { 
-            if (xhr.response.status) {
-                console.log('ok!');
-            }
-        });
-    }
+  if (validateForm(myForm)) {
+    const data = {
+      email: myForm.elements.email.value,
+      password: myForm.elements.password.value,
+      radios: myForm.elements.radios.value,
+      adult: myForm.elements.adult.checked
+    };
+    console.log(data);
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/post');
+    xhr.send(JSON.stringify(data));
+    xhr.addEventListener('load', () => {
+      if (xhr.response.status) {
+        console.log('ok!');
+      }
+    });
+  }
 });
 function validateForm(form) {
-    let valid = true;
+  let valid = true;
 
-    if (!validateField(form.elements.email)) {
-        valid = false;
-    }
+  if (!validateField(form.elements.email)) {
+    valid = false;
+  }
 
-    if (!validateField(form.elements.password)) {
-        valid = false;
-    }
+  if (!validateField(form.elements.password)) {
+    valid = false;
+  }
 
-    if (!validateField(form.elements.checkbox)) {
-        valid = false;
-    } 
+  // if (!validateField(form.elements.checkbox)) {
+  //     valid = false;
+  // }
 
-    return valid;
-}  
+  return valid;
+}
 
 // function validateField(field) {
- 
+
 //     field.next.ElementSibling.textContent = field.validationMessage;
 //     return field.checkValidity();
 
-// } 
+// }
