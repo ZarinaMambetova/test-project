@@ -112,7 +112,7 @@ p {
   height: 14px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background: url(/images/icon/check.png);
+  background: url(../images/icon/check.png);
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 16px; }
@@ -279,7 +279,7 @@ p {
   .button_icon-login::before {
     width: 24px;
     height: 24px;
-    background: url(/images/icon/user.svg); }
+    background: url(../images/icon/user.svg); }
 
 .button__link {
   color: #ffffff;
@@ -416,7 +416,7 @@ p {
 .button_icon-error::before {
   width: 24px;
   height: 24px;
-  background: url(/images/icon/attention.png);
+  background: url(../images/icon/attention.png);
   background-repeat: no-repeat;
   -ms-flex-negative: 0;
   flex-shrink: 0;
