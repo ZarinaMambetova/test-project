@@ -1,7 +1,8 @@
 const myForm = document.querySelector('#myForm');
 const send = document.querySelector('#submit');
+console.dir(myForm.elements.adult.checked);
 
-send.addEventListener('click', (event) => {
+myForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   if (validateForm(myForm)) {
@@ -14,10 +15,10 @@ send.addEventListener('click', (event) => {
     console.log(data);
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
-    xhr.open('POST', 'https://webdev-api.loftschool.com/post');
+    xhr.open('POST', 'https://httpbin.org/post');
     xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', () => {
-      if (xhr.response.status) {
+      if (xhr.response.json) {
         console.log('ok!');
       }
     });
@@ -34,16 +35,21 @@ function validateForm(form) {
     valid = false;
   }
 
-  // if (!validateField(form.elements.checkbox)) {
-  //     valid = false;
-  // }
+  if (!validateField(form.elements.adult)) {
+      valid = false;
+  }
 
   return valid;
 }
 
-// function validateField(field) {
+function validateField(field) {
 
-//     field.next.ElementSibling.textContent = field.validationMessage;
-//     return field.checkValidity();
-
-// }
+  if (!field.checkValidity()) {
+        field.nextElementSibling.textContent = field.validationMessage;
+    return false;
+    
+  } else {
+    field.nextElementSibling.textContent = '';
+    return true;
+  }
+}
